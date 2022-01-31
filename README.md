@@ -21,7 +21,7 @@ python train.py
 ## test on data of the year 2019##
 python evaluate_model_ME.py --dset_type test2019
 ```
-##Training new models
+## Training new models
 Instructions for training new models can be [found here](https://github.com/Zjut-MultimediaPlus/MMSTN/blob/main/TRAINING.md).
 
 ## The data we used

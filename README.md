@@ -14,12 +14,12 @@ pip install -r requirements.txt
 ##before train##
 python -m visdom.server
 ##custom train##
-python scripts/train.py
+python train.py
 ```
 ## Test
 ```python
 ## test on data of the year 2019##
-python scripts/evaluate_model_ME.py --dset_type test2019
+python evaluate_model_ME.py --dset_type test2019
 ```
 ## The data we used
 We used two open access dataset: [the CMA Tropical Cyclone Best Track Dataset](https://tcdata.typhoon.org.cn/en/zjljsjj_sm.html) 

@@ -1,27 +1,40 @@
-# Social GAN
+# MMSTN: a Multi-Modal Spatial-Temporal Network for Tropical Cyclone Short-Term Prediction
+## Introduction
+This is the source code of MMSTN.
+## Requirements 
+* python 3.7.7
+* Pytorch 1.10.0
+* CUDA 10.2
+```python
+##Install required libraries##
+pip install -r requirements.txt
+```
+## Train
+```python
+##before train##
+python -m visdom.server
+##custom train##
+python scripts/train.py
+```
+## Test
+```python
+## test on data of the year 2019##
+python scripts/evaluate_model_ME.py --dset_type test2019
+```
+## The data we used
+We used two open access dataset: [the CMA Tropical Cyclone Best Track Dataset](https://tcdata.typhoon.org.cn/en/zjljsjj_sm.html) 
+and the results of [the CMO's tropical cyclone predictions](http://typhoon.nmc.cn/web.html).
 
-This is the code for the paper
+To facilitate our readers, we arrange these data and upload them in [Data](https://github.com/Zjut-MultimediaPlus/MMSTN/tree/main/Data)
 
-**<a href="https://arxiv.org/abs/1803.10892">Social GAN: Socially Acceptable Trajectories with Generative Adversarial Networks</a>**
-<br>
-<a href="http://web.stanford.edu/~agrim/">Agrim Gupta</a>,
-<a href="http://cs.stanford.edu/people/jcjohns/">Justin Johnson</a>,
-<a href="http://vision.stanford.edu/feifeili/">Fei-Fei Li</a>,
-<a href="http://cvgl.stanford.edu/silvio/">Silvio Savarese</a>,
-<a href="http://web.stanford.edu/~alahi/">Alexandre Alahi</a>
-<br>
-Presented at [CVPR 2018](http://cvpr2018.thecvf.com/)
+If you are interesting in these data, you can click [the CMA Tropical Cyclone Best Track Dataset](https://tcdata.typhoon.org.cn/en/zjljsjj_sm.html) and
+[the CMO's tropical cyclone data](http://typhoon.nmc.cn/web.html) to obtain more details. 
 
-Human motion is interpersonal, multimodal and follows social conventions. In this paper, we tackle this problem by combining tools from sequence prediction and generative adversarial networks: a recurrent sequence-to-sequence model observes motion histories and predicts future behavior, using a novel pooling mechanism to aggregate information across
-people.
+We will also update how these data used in the MMSTN in the future, so stay tuned...
 
-Below we show an examples of socially acceptable predictions made by our model in complex scenarios. Each person is denoted by a different color. We denote observed trajectory by dots and predicted trajectory by stars.
-<div align='center'>
-<img src="images/2.gif"></img>
-<img src="images/3.gif"></img>
-</div>
-
-If you find this code useful in your research then please cite
+## Note
+Our codes were modified from the implementation of ["Social GAN: Socially Acceptable Trajectories with Generative Adversarial Networks"](https://github.com/agrimgupta92/sgan). Please cite the two papers (SGAN and MMSTN) when you use the codes.
+## Citing SGAN & MMSTN
 ```
 @inproceedings{gupta2018social,
   title={Social GAN: Socially Acceptable Trajectories with Generative Adversarial Networks},
@@ -32,42 +45,12 @@ If you find this code useful in your research then please cite
 }
 ```
 
-## Model
-Our model consists of three key components: Generator (G), Pooling Module (PM) and Discriminator (D). G is based on encoder-decoder framework where we link the hidden states of encoder and decoder via PM. G takes as input trajectories of all people involved in a scene and outputs corresponding predicted trajectories. D inputs the entire sequence comprising both input trajectory and future prediction and classifies them as “real/fake”.
-
-<div align='center'>
-  <img src='images/model.png' width='1000px'>
-</div>
-
-## Setup
-All code was developed and tested on Ubuntu 16.04 with Python 3.5 and PyTorch 0.4.
-
-You can setup a virtual environment to run the code like this:
-
-```bash
-python3 -m venv env               # Create a virtual environment
-source env/bin/activate           # Activate virtual environment
-pip install -r requirements.txt   # Install dependencies
-echo $PWD > env/lib/python3.5/site-packages/sgan.pth  # Add current directory to python path
-# Work for a while ...
-deactivate  # Exit virtual environment
 ```
-
-## Pretrained Models
-You can download pretrained models by running the script `bash scripts/download_models.sh`. This will download the following models:
-
-- `sgan-models/<dataset_name>_<pred_len>.pt`: Contains 10 pretrained models for all five datasets. These models correspond to SGAN-20V-20 in Table 1.
-- `sgan-p-models/<dataset_name>_<pred_len>.pt`: Contains 10 pretrained models for all five datasets. These models correspond to SGAN-20VP-20 in Table 1.
-
-Please refer to [Model Zoo](MODEL_ZOO.md) for results.
-
-## Running Models
-You can use the script `scripts/evaluate_model.py` to easily run any of the pretrained models on any of the datsets. For example you can replicate the Table 1 results for all datasets for SGAN-20V-20 like this:
-
-```bash
-python scripts/evaluate_model.py \
-  --model_path models/sgan-models
+@xxx{xxx,
+  title={Social GAN: Socially Acceptable Trajectories with Generative Adversarial Networks},
+  author={Cheng Huang,Cong Bai, Sixian Chan, Jinglin Zhang},
+  booktitle={xxx},
+  number={xxx},
+  year={xxx}
+}
 ```
-
-## Training new models
-Instructions for training new models can be [found here](TRAINING.md).

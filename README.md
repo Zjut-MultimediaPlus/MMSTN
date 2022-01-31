@@ -21,6 +21,9 @@ python train.py
 ## test on data of the year 2019##
 python evaluate_model_ME.py --dset_type test2019
 ```
+##Training new models
+Instructions for training new models can be [found here](https://github.com/Zjut-MultimediaPlus/MMSTN/blob/main/TRAINING.md).
+
 ## The data we used
 We used two open access dataset: [the CMA Tropical Cyclone Best Track Dataset](https://tcdata.typhoon.org.cn/en/zjljsjj_sm.html) 
 and the results of [the CMO's tropical cyclone predictions](http://typhoon.nmc.cn/web.html).
@@ -30,7 +33,7 @@ To facilitate our readers, we arrange these data and upload them in [Data](https
 If you are interesting in these data, you can click [the CMA Tropical Cyclone Best Track Dataset](https://tcdata.typhoon.org.cn/en/zjljsjj_sm.html) and
 [the CMO's tropical cyclone data](http://typhoon.nmc.cn/web.html) to obtain more details. 
 
-We will also update how these data used in the MMSTN in the future, so stay tuned...
+
 
 ## Note
 Our codes were modified from the implementation of ["Social GAN: Socially Acceptable Trajectories with Generative Adversarial Networks"](https://github.com/agrimgupta92/sgan). Please cite the two papers (SGAN and MMSTN) when you use the codes.

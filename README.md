@@ -12,7 +12,7 @@ When we use MMSTN to make a prediction of TC, we will generate k possible tenden
 
 ![***cone of probability***](https://github.com/Zjut-MultimediaPlus/MMSTN/blob/main/Data/example24.png)
 
-As for the calculation of evaluation index, we choose the **best prediction** through these k possible tendencies (including every time points) as our final prediction.
+As for the calculation of evaluation criteria, we choose the **best prediction** through these k possible tendencies (including every time points) as our final prediction.
 
 This is the source code of MMSTN.
 ## Requirements 

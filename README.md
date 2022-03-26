@@ -50,6 +50,8 @@ If you are interesting in these data, you can click [the CMA Tropical Cyclone Be
 
 
 ## Note
+Tropical cyclone prediction is a very difficult task. CMA dataset is not enough to train a perfect model to execute this task. MMSTN is a trivial but interesting attempt (cone of probability) for TC prediction. In order to make a better prediction of TC, expanding the training data with more information, including satellite cloud images, radar data, etc, maybe a good solution. Although, it also has its limitation. The data misalignment, the shortage of data with more information (only after the 2010s), and others are very tough difficulties and need us to tackle. If you have any advice or any questions, welcome to talk with me.
+
 Our codes were modified from the implementation of ["Social GAN: Socially Acceptable Trajectories with Generative Adversarial Networks"](https://github.com/agrimgupta92/sgan). Please cite the two papers (SGAN and MMSTN) when you use the codes.
 ## Citing SGAN & MMSTN
 ```

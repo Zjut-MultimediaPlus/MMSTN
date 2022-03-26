@@ -8,9 +8,9 @@ Contribution:
 
 The explanation of ***cone of probability***:
 
-When we use MMSTN to make a prediction of TC, we will generate k possible predictions. By calculating these k possible predictions, we obtain the ***cone of probability***. Like the figure shown below: 
+When we use MMSTN to make a prediction of TC, we will generate k possible predictions. By calculating these k possible predictions, we obtain the ***cone of probability***. Like the figure showing below: 
 
-![***cone of probability***](http://www.baidu.com/img/bdlogo.gif "百度logo")
+![***cone of probability***](https://github.com/Zjut-MultimediaPlus/MMSTN/blob/main/Data/example24.png)
 
 As for the calculation of evaluation index, we choose the **best prediction** through these k possible prediction (including every time points) as our final prediction.
 
